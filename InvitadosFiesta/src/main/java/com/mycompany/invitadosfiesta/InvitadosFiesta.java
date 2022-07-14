@@ -61,19 +61,20 @@ public class InvitadosFiesta {
                     System.out.println("Los invitados son: "+invitados);
                 break;
                 case "3":
+                    encontrado=false; // solucion RICARD eliminando parte del codigo.
                     System.out.println("BUSCAR ELEMENTO");
                     nombre=dato.next().toUpperCase();
                     for(int x=0; x<invitados.size();x++){
                         if(nombre.equals(invitados.get(x))){
                             encontrado=true;
-                            x=invitados.size();
-                        }else{
-                            encontrado=false;
-                        }
+                           // x=invitados.size();
+                        }//else{
+                         //   encontrado=false;
+                        //}
                     }// fin for
                         if(encontrado==true){
                             System.out.println("El Array es: "+ invitados+ "");
-                            System.out.println("Y el elemento: "+ nombre+ " SI esta incluido en el Array\n  ");
+                            System.out.println("Y el elemento: "+ nombre+ " SI esta incluido en el Array \n  ");
                         }else{
                             System.out.println("El Array es: "+ invitados+ " ");
                             System.out.println("El elemento: "+ nombre+ " NO esta incluido en el Array \n");
